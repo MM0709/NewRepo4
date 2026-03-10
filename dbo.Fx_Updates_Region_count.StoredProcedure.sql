@@ -6,7 +6,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-ALter PROCEDURE [dbo].[Fx_Updates_Region_count](  @group_Id INT, @Counts NVARCHAR(255))
+Create OR ALter PROCEDURE [dbo].[Fx_Updates_Region_count_MM](  @group_Id INT, @Counts NVARCHAR(255))
 AS  
 BEGIN  
 	UPDATE DGDB_PL..FX_UPDATES_COUNTS SET Counts = @Counts WHERE Group_Id = @group_Id 
